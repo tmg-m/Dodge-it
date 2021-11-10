@@ -16,6 +16,19 @@ class Game {
     );
   }
 
+  _checkCollision() {
+    if (
+      this.player.posX < this.obsticle.posX + this.obsticle.width &&
+      this.player.posX + this.player.width > this.obsticle.posX &&
+      this.player.posY < this.obsticle.posY + this.obsticle.height &&
+      this.player.height + this.player.posY > this.obsticle.posY
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   _updateFps() {
     this.ctx.fillStyle = "grey";
     this.ctx.fillRect(0, 0, 500, 900);
@@ -32,7 +45,11 @@ class Game {
   }
 
   _renderFrameGame() {
+    if (this._checkCollision() === true) {
+      gameOverScreen();
+    }
     this._updateFps();
+    this._checkCollision();
     this._drawObsticle();
     this._drawPlayer();
     window.requestAnimationFrame(this._renderFrameGame.bind(this));
@@ -60,7 +77,7 @@ class Game {
   }
 
   start() {
-    this.controller()
+    this.controller();
     window.requestAnimationFrame(this._renderFrameGame.bind(this));
   }
 }

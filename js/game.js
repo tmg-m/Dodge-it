@@ -77,6 +77,7 @@ class Game {
   }
 
   start() {
+    this.obsticle._movementAnimation();
     this.controller();
     window.requestAnimationFrame(this._renderFrameGame.bind(this));
   }

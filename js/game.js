@@ -48,6 +48,10 @@ class Game {
     if (this._checkCollision() === true) {
       gameOverScreen();
     }
+    if (this.obsticle.posY > 900) {
+      // loop of object
+      this.obsticle.posY = 0;
+    }
     this._updateFps();
     this._checkCollision();
     this._drawObsticle();

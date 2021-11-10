@@ -11,6 +11,9 @@ class Player {
     switch (this.direction) {
       case "N":
         this.posY -= 100;
+        if (this.posY < 0) {
+          this.posY = 0;
+        }
         break;
       default:
         break;
@@ -21,6 +24,9 @@ class Player {
     switch (this.direction) {
       case "N":
         this.posY += 100;
+        if (this.posY > 800) {
+          this.posY = 800;
+        }
         break;
       default:
         break;

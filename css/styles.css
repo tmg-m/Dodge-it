@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(136, 136, 136);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.hidden {
+    display: none;
+}
+
+#board {
+    border: 5px solid rgb(0, 0, 0);
+}

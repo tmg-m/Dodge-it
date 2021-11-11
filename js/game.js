@@ -3,6 +3,7 @@ class Game {
     this.ctx = content.ctx;
     this.player = content.player;
     this.obsticle = content.obsticle;
+    this.score = 0;
   }
 
   _drawPlayer() {
@@ -44,28 +45,40 @@ class Game {
   }
 
   _getrandomNum() {
-    let random = Math.floor(Math.random() * (4 - 1) + 1);
-    return random * 100;
+    return Math.floor(Math.random() * (4 - 1) + 1) * 100;
   }
 
-  _generateNewObsticle (){
-    this.obsticle.posX = this._getrandomNum()
-    this.obsticle._movementAnimation(0.5)
+  _generateNewObsticle() {
+    this.obsticle.posX = this._getrandomNum();
+      this.obsticle._movementAnimation(0.3);
+    if (this.score === 10) {
+      this.obsticle._movementAnimation(1);
+    } else if(this.score === 20) {
+      this.obsticle._movementAnimation(2)
+    } else if(this.score === 30){
+      this.obsticle._movementAnimation(3)
+    }
+
+  }
+
+  _clearInterval() {
+    let myInterval = this.obsticle._movementAnimation();
+    clearInterval(myInterval);
   }
 
   _renderFrameGame() {
     if (this._checkCollision() === true) {
       gameOverScreen();
-      
+      this._clearInterval();
     }
     if (this.obsticle.posY > 900) {
-      // loop of object
       this.obsticle.posY = 0;
       console.log("looped");
-      this._generateNewObsticle()
+      this.score += 1;
+      console.log(this.score);
+      this._generateNewObsticle();
     }
     this._updateFps();
-    this._checkCollision();
     this._drawObsticle();
     this._drawPlayer();
     window.requestAnimationFrame(this._renderFrameGame.bind(this));

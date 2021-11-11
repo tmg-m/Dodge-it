@@ -11,6 +11,7 @@ class Obsticle {
     setInterval(() => {
       this.posY += count;
     }, 10);
+    return count
   }
 
   

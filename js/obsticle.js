@@ -1,5 +1,5 @@
 class Obsticle {
-  constructor(posX = 0, posY = 0, direction = "N") {
+  constructor(posX, posY, direction = "N") {
     this.posX = posX;
     this.posY = posY;
     this.width = 100;
@@ -12,4 +12,6 @@ class Obsticle {
       this.posY += 5;
     }, 10);
   }
+
+  
 }

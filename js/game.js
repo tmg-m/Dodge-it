@@ -3,7 +3,6 @@ class Game {
     this.ctx = content.ctx;
     this.player = content.player;
     this.obsticle = content.obsticle;
-    this.array = [];
   }
 
   _drawPlayer() {
@@ -78,6 +77,11 @@ class Game {
           break;
       }
     });
+  }
+
+  _getrandomNum() {
+    let random = Math.floor(Math.random() * (4 - 1) + 1);
+    return random * 100
   }
 
   start() {

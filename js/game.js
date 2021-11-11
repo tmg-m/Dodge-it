@@ -43,13 +43,26 @@ class Game {
     );
   }
 
+  _getrandomNum() {
+    let random = Math.floor(Math.random() * (4 - 1) + 1);
+    return random * 100;
+  }
+
+  _generateNewObsticle (){
+    this.obsticle.posX = this._getrandomNum()
+    this.obsticle._movementAnimation(0.5)
+  }
+
   _renderFrameGame() {
     if (this._checkCollision() === true) {
       gameOverScreen();
+      
     }
     if (this.obsticle.posY > 900) {
       // loop of object
       this.obsticle.posY = 0;
+      console.log("looped");
+      this._generateNewObsticle()
     }
     this._updateFps();
     this._checkCollision();
@@ -79,13 +92,9 @@ class Game {
     });
   }
 
-  _getrandomNum() {
-    let random = Math.floor(Math.random() * (4 - 1) + 1);
-    return random * 100
-  }
-
   start() {
-    this.obsticle._movementAnimation();
+    console.log("started");
+    this.obsticle._movementAnimation(5);
     this.controller();
     window.requestAnimationFrame(this._renderFrameGame.bind(this));
   }

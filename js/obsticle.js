@@ -7,9 +7,9 @@ class Obsticle {
     this.direction = direction;
   }
 
-  _movementAnimation() {
+  _movementAnimation(count) {
     setInterval(() => {
-      this.posY += 5;
+      this.posY += count;
     }, 10);
   }
 

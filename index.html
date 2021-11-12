@@ -8,22 +8,34 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <div id="splash-screen" class="">
-      <button id="play-btn">PLAY</button>
-    </div>
-    <div id="game-screen" class="hidden">
-      <button id="start-btn">START</button>
-      <button id="win-btn">WIN</button>
-      <button id="gameover-btn">GAME OVER</button>
-    </div>
-    <div id="startgame-screen" class="hidden">
-      <canvas id="board" width="500px" height="900"></canvas>
-    </div>
-    <div id="win-screen" class="hidden">
-      <h1>You Won !</h1>
-    </div>
-    <div id="gameover-screen" class="hidden">
-      <h1>Game Over !</h1>
+    <div class="container">
+      <div id="game-screen" class="">
+        <div class="initial-screen">
+          <h1>Test of might</h1>
+          <button id="start-btn"></button>
+          <div class="how-cred-btn">
+            <button class="how-btn"></button>
+            <button class="about-btn"></button>
+          </div>
+        </div>
+      </div>
+      <div id="startgame-screen" class="hidden">
+        <canvas id="board" width="500px" height="900"></canvas>
+      </div>
+
+      <div id="gameover-screen" class="hidden">
+        <div class="gme-over">
+          <div class="end-game">
+            <h1>Your Score</h1>
+            <h2 id="score"></h2>
+          </div>
+          <h1>Game Over !</h1>
+          <div class="play-main-btn">
+            <button class="play-again"></button>
+            <button class="menu"></button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="/js/img.js"></script>
     <script src="/js/obsticle.js"></script>

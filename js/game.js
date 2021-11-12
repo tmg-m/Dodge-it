@@ -7,8 +7,13 @@ class Game {
   }
 
   _drawPlayer() {
-    this.ctx.fillStyle = "green";
-    this.ctx.fillRect(
+    this.ctx.drawImage(
+      playerSprite.sprite,
+      playerSprite.posX,
+      playerSprite.posY,
+      playerSprite.width,
+      playerSprite.height,
+
       this.player.posX,
       this.player.posY,
       this.player.width,
@@ -35,8 +40,13 @@ class Game {
   }
 
   _drawObsticle() {
-    this.ctx.fillStyle = "blue";
-    this.ctx.fillRect(
+    this.ctx.drawImage(
+      obsticleSprite.sprite,
+      obsticleSprite.posX,
+      obsticleSprite.posY,
+      obsticleSprite.width,
+      obsticleSprite.height,
+
       this.obsticle.posX,
       this.obsticle.posY,
       this.obsticle.width,
@@ -50,13 +60,22 @@ class Game {
 
   _generateNewObsticle() {
     this.obsticle.posX = this._getrandomNum();
-      this.obsticle._movementAnimation(0.3);
     if (this.score === 10) {
-      this.obsticle._movementAnimation(1);
+      this.obsticle._movementAnimation(1.5);
+      this.obsticle._movementAnimation(0.3);
     } else if(this.score === 20) {
-      this.obsticle._movementAnimation(2)
+      this.obsticle._movementAnimation(2.5)
+      this.obsticle._movementAnimation(0.3);
     } else if(this.score === 30){
-      this.obsticle._movementAnimation(3)
+      this.obsticle._movementAnimation(3.5)
+      this.obsticle._movementAnimation(0.3);
+    } else if(this.score === 40){
+      this.obsticle._movementAnimation(4);
+      this.obsticle._movementAnimation(0.3);
+    } else if(this.score === 50){
+      this.obsticle._movementAnimation(4.5);
+    } else if(this.score === 60){
+      this.obsticle._movementAnimation(5);
     }
 
   }

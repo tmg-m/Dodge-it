@@ -35,8 +35,13 @@ class Game {
   }
 
   _updateFps() {
-    this.ctx.fillStyle = "grey";
-    this.ctx.fillRect(0, 0, 500, 900);
+    this.ctx.drawImage(
+      canvasSprite.sprite,
+      canvasSprite.posX,
+      canvasSprite.posY,
+      canvasSprite.width,
+      canvasSprite.height,
+    )
   }
 
   _drawObsticle() {
@@ -95,6 +100,26 @@ class Game {
       console.log("looped");
       this.score += 1;
       console.log(this.score);
+
+      let score = document.querySelector("#score");
+      score.innerHTML= this.score;
+
+      let compliment = document.querySelector(".compliment")
+      if(this.score < 10){
+        compliment.innerHTML = " no comment, like really ?? - .. - ";
+      } else if (this.score <= 20){
+        compliment.innerHTML = " really bruh ?? !! 0..o";
+      } else if ( this.score <= 30){
+        compliment.innerHTML = " So so";
+      } else if ( this.score <= 40){
+        compliment.innerHTML = "You are good!";
+      } else if (this.score <= 50){
+        compliment.innerHTML = "Amazing!";
+      } else if (this.score <= 60){
+        compliment.innerHTML = "omg! Just go Super Saiyan!";
+      } else if ( this.score > 60){
+        compliment.innerHTML = "God level!";
+      }
       this._generateNewObsticle();
     }
     this._updateFps();
@@ -113,13 +138,13 @@ class Game {
         case "ArrowRight":
           this.player.right();
           break;
-        case "ArrowUp":
+        /* case "ArrowUp":
           this.player.up();
           break;
         case "ArrowDown":
           this.player.down();
         default:
-          break;
+          break; */
       }
     });
   }

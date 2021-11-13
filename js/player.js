@@ -7,7 +7,7 @@ class Player {
     this.direction = direction;
   }
 
-  up() {
+  /* up() {
     switch (this.direction) {
       case "N":
         this.posY -= 100;
@@ -31,7 +31,7 @@ class Player {
       default:
         break;
     }
-  }
+  } */
 
   left() {
     switch (this.direction) {

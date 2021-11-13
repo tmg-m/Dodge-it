@@ -11,14 +11,34 @@
     <div class="container">
       <div id="game-screen" class="">
         <div class="initial-screen">
-          <h1>Test of might</h1>
+          <h1>DODGE IT</h1>
+          <div class="img">
+            <img class="imgCap" src="/img/obsticle.png" alt="obsticle">
+            <img class="imgCap" src="/img/player.png" alt="olayer">
+          </div>
           <button id="start-btn"></button>
           <div class="how-cred-btn">
-            <button class="how-btn"></button>
+            <button id="howto-btn" class="how-btn"></button>
             <button class="about-btn"></button>
           </div>
         </div>
       </div>
+
+      <div id="keyMapScreen" class="hidden">
+        <img class="keymap"src="/img/keymap.png" alt="keymap">
+        <h2>use arrow keys to move left or right </h2>
+        <button class="close"></button>
+      </div>
+
+      <div id="aboutScreen" class="hidden">
+        <div class="about-info">
+          <h2>A simple game to test your reflex time.</h2>
+          <h2>Have fun dodging those obsticles!</h2>
+          <h3>created by Mahendra</h3>
+        </div>
+        <button class="go-back"></button>
+      </div>
+
       <div id="startgame-screen" class="hidden">
         <canvas id="board" width="500px" height="900"></canvas>
       </div>
@@ -27,12 +47,13 @@
         <div class="gme-over">
           <div class="end-game">
             <h1>Your Score</h1>
-            <h2 id="score"></h2>
+            <h1 id="score">0</h1>
           </div>
+          <h2 class="compliment"></h2>
           <h1>Game Over !</h1>
           <div class="play-main-btn">
-            <button class="play-again"></button>
-            <button class="menu"></button>
+            <button id="replay" class="play-again"></button>
+            <button id="menuFloor" class="menu"></button>
           </div>
         </div>
       </div>

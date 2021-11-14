@@ -19,8 +19,8 @@ window.addEventListener("load", () => {
   }
 
   function restartGame() {
-    let splashScreen = document.querySelector("#gameover-screen");
-    splashScreen.classList.add("hidden");
+    let gameOverScreen = document.querySelector("#gameover-screen");
+    gameOverScreen.classList.add("hidden");
 
     let startGame = document.querySelector("#startgame-screen");
     startGame.classList.remove("hidden");
@@ -37,24 +37,31 @@ window.addEventListener("load", () => {
     demoGame.start();
   }
 
+  //  startBtn from initial screen
   let startBtn = document.querySelector("#start-btn");
   startBtn.addEventListener("click", startGame);
 
+  // replayBtn from gameover screen
   let replayBtn = document.querySelector("#replay");
   replayBtn.addEventListener("click", restartGame);
 
+  // menuBtn from gameover screen
   let menuBtn = document.querySelector("#menuFloor");
   menuBtn.addEventListener("click", gameScreen);
 
+  // howtoBtn/controls from initial screen
   let howToBtn = document.querySelector("#howto-btn");
   howToBtn.addEventListener("click", keyMapScreen);
 
+  // back to main menu from howto/controls screen
   let removeHowToBtn = document.querySelector(".close")
   removeHowToBtn.addEventListener("click", removeKeyMapScreen);
 
+  // credits/about game btn form initial screen
   let about = document.querySelector(".about-btn");
   about.addEventListener("click", aboutScreen)
-
+  
+  // back to initial screen from credits/about game
   let removeAbout = document.querySelector(".go-back");
   removeAbout.addEventListener("click", removeAboutScreen);
 

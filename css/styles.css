@@ -110,6 +110,11 @@ body {
   background: url(/img/menu.png) no-repeat center;
   background-size: 100%;
   border-radius: 50%;
+  transition: all .2s ease-in-out;
+} 
+  .close:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 12px 1px rgb(255, 255, 255);
 }
 
 .about-btn {
@@ -140,7 +145,12 @@ body {
   background: url(/img/menu.png) no-repeat center;
   background-size: 100%;
   border-radius: 50%;
+  transition: all .2s ease-in-out;
 }
+  .go-back:hover{
+    transform: scale(1.07);
+		box-shadow: 0 0 15px 1px rgb(255, 255, 255);
+	}
 
 /* gameover-screen */
 .gme-over {
@@ -178,8 +188,10 @@ body {
   background: url(/img/replay.png) no-repeat center;
   background-size: 100%;
   border-radius: 100%;
+  transition: all .2s ease-in-out;
 }
   .play-again:hover{
+    transform: scale(1.07);
     box-shadow: 0 0 50px 1px rgb(255, 255, 255);
   }
 
@@ -190,8 +202,10 @@ body {
   background: url(/img/menu.png) no-repeat center;
   background-size: 100%;
   border-radius: 50%;
+  transition: all .2s ease-in-out;
 }
   .menu:hover{
+    transform: scale(1.07);
     box-shadow: 0 0 50px 1px rgb(255, 255, 255);
   }
 

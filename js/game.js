@@ -106,7 +106,7 @@ class Game {
 
       let compliment = document.querySelector(".compliment")
       if(this.score < 10){
-        compliment.innerHTML = " no comment, like really ?? - .. - ";
+        compliment.innerHTML = " no comment, seriously ?? - .. - ";
       } else if (this.score <= 20){
         compliment.innerHTML = " really bruh ?? !! 0..o";
       } else if ( this.score <= 30){

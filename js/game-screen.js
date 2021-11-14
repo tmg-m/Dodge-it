@@ -8,7 +8,7 @@ function gameScreen() {
 
 
 function gameOverScreen() {
-  let gameScreen = document.querySelector("#board");
+  let gameScreen = document.querySelector("#startgame-screen");
   gameScreen.classList.add("hidden");
 
   let gameOverScreen = document.querySelector("#gameover-screen");
@@ -58,13 +58,4 @@ function goBackToMenu(){
 
   let gameScreen = document.querySelector("#game-screen");
   gameScreen.classList.remove("hidden");
-}
-
-// gameover replay btn !!!
-function rePlayAgain(){
-  let startGame = document.querySelector("#startGame-screen");
-  gameScreen.classList.remove("hidden");
-
-  let gameOverScreen = document.querySelector("#gameover-screen");
-  gameOverScreen.classList.add("hidden");
 }

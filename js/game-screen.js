@@ -16,7 +16,7 @@ function gameOverScreen() {
 }
 
 /// key instruction button ON/OFF !!!
-function keyMapScreen(){
+function keyMapScreen() {
   let gameScreen = document.querySelector("#game-screen");
   gameScreen.classList.add("hidden");
 
@@ -24,7 +24,7 @@ function keyMapScreen(){
   keyMap.classList.remove("hidden");
 }
 
-function removeKeyMapScreen (){
+function removeKeyMapScreen() {
   let keyMap = document.querySelector("#keyMapScreen");
   keyMap.classList.add("hidden");
 
@@ -52,7 +52,7 @@ function removeAboutScreen() {
 
 /// gameover back btn !!!
 
-function goBackToMenu(){
+function goBackToMenu() {
   let gameOverScreen = document.querySelector("#gameover-screen");
   gameOverScreen.classList.add("hidden");
 

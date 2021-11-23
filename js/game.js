@@ -68,18 +68,18 @@ class Game {
     if (this.score === 10) {
       this.obsticle._movementAnimation(1.5);
       this.obsticle._movementAnimation(0.3);
-    } else if(this.score === 20) {
+    } else if (this.score === 20) {
       this.obsticle._movementAnimation(2.5)
       this.obsticle._movementAnimation(0.3);
-    } else if(this.score === 30){
+    } else if (this.score === 30) {
       this.obsticle._movementAnimation(3.5)
       this.obsticle._movementAnimation(0.3);
-    } else if(this.score === 40){
+    } else if (this.score === 40) {
       this.obsticle._movementAnimation(4);
       this.obsticle._movementAnimation(0.3);
-    } else if(this.score === 50){
+    } else if (this.score === 50) {
       this.obsticle._movementAnimation(4.5);
-    } else if(this.score === 60){
+    } else if (this.score === 60) {
       this.obsticle._movementAnimation(5);
     }
 
@@ -102,22 +102,22 @@ class Game {
       console.log(this.score);
 
       let score = document.querySelector("#score");
-      score.innerHTML= this.score;
+      score.innerHTML = this.score;
 
       let compliment = document.querySelector(".compliment")
-      if(this.score < 10){
+      if (this.score < 10) {
         compliment.innerHTML = " no comment, seriously ?? - .. - ";
-      } else if (this.score <= 20){
+      } else if (this.score <= 20) {
         compliment.innerHTML = " really bruh ?? !! 0..o";
-      } else if ( this.score <= 30){
+      } else if (this.score <= 30) {
         compliment.innerHTML = " So so";
-      } else if ( this.score <= 40){
+      } else if (this.score <= 40) {
         compliment.innerHTML = "You are good!";
-      } else if (this.score <= 50){
+      } else if (this.score <= 50) {
         compliment.innerHTML = "Amazing!";
-      } else if (this.score <= 60){
+      } else if (this.score <= 60) {
         compliment.innerHTML = "omg! Just go Super Saiyan!";
-      } else if ( this.score > 60){
+      } else if (this.score > 60) {
         compliment.innerHTML = "God level!";
       }
       this._generateNewObsticle();

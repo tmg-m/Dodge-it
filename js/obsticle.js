@@ -13,5 +13,5 @@ class Obsticle {
     }, 10);
   }
 
-  
+
 }

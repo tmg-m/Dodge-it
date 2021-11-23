@@ -60,7 +60,7 @@ window.addEventListener("load", () => {
   // credits/about game btn form initial screen
   let about = document.querySelector(".about-btn");
   about.addEventListener("click", aboutScreen)
-  
+
   // back to initial screen from credits/about game
   let removeAbout = document.querySelector(".go-back");
   removeAbout.addEventListener("click", removeAboutScreen);

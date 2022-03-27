@@ -1,6 +1,6 @@
 # DODGE IT !
 
-Ironhack-project-M1
+First project
 
 ## Description
 

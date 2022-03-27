@@ -60,7 +60,7 @@ body {
   width: 150px;
   height: 150px;
   border: none;
-  background: url("../img/start.png") no-repeat center;
+  background: url("img/start.png") no-repeat center;
   background-size: 100%;
   border-radius: 50%;
   transition: all .2s ease-in-out;
@@ -81,7 +81,7 @@ body {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background: url("../img/controls.png") no-repeat center;
+  background: url("img/controls.png") no-repeat center;
   transition: all .2s ease-in-out;
 }
 .how-btn:hover {
@@ -107,7 +107,7 @@ body {
   margin-left: 150px;
   margin-right: 150px;;
   border: none;
-  background: url("../img/menu.png") no-repeat center;
+  background: url("img/menu.png") no-repeat center;
   background-size: 100%;
   border-radius: 50%;
   transition: all .2s ease-in-out;
@@ -122,7 +122,7 @@ body {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background: url("../img/about.png") no-repeat center;
+  background: url("img/about.png") no-repeat center;
   transition: all .2s ease-in-out;
 }
 	.about-btn:hover{
@@ -142,7 +142,7 @@ body {
   margin-left: 250px;
   margin-right: 250px;
   border: none;
-  background: url("../img/menu.png") no-repeat center;
+  background: url("img/menu.png") no-repeat center;
   background-size: 100%;
   border-radius: 50%;
   transition: all .2s ease-in-out;
@@ -185,7 +185,7 @@ body {
   width: 90px;
   height: 90px;
   border: none;
-  background: url("../img/replay.png") no-repeat center;
+  background: url("img/replay.png") no-repeat center;
   background-size: 100%;
   border-radius: 100%;
   transition: all .2s ease-in-out;
@@ -199,7 +199,7 @@ body {
   width: 90px;
   height: 90px;
   border: none;
-  background: url("../img/menu.png") no-repeat center;
+  background: url("img/menu.png") no-repeat center;
   background-size: 100%;
   border-radius: 50%;
   transition: all .2s ease-in-out;

@@ -108,9 +108,9 @@ class Game {
       if(this.score < 10){
         compliment.innerHTML = " no comment, seriously ?? - .. - ";
       } else if (this.score <= 20){
-        compliment.innerHTML = " really bruh ?? !! 0..o";
+        compliment.innerHTML = " Try again!! 0..o";
       } else if ( this.score <= 30){
-        compliment.innerHTML = " So so";
+        compliment.innerHTML = " Nice !";
       } else if ( this.score <= 40){
         compliment.innerHTML = "You are good!";
       } else if (this.score <= 50){
